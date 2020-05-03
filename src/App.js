@@ -6,6 +6,7 @@ import Chart from './Components/Charts/Chart';
 import Country from './Components/Country/Country';
 import {dataFetch} from './api';
 
+
 class App extends React.Component{
   state = {
     data:{},
@@ -19,8 +20,9 @@ class App extends React.Component{
   return (
     <div className={styles.container}>
       <Cards data={data}/>
-      <Country />
-      <Chart />
+      {//<Country />
+      //<Chart />
+    }
     </div>
   );
 }
