@@ -3,9 +3,13 @@ import Country from '../Components/Country/Country';
 
 const url = "https://covid19.mathdro.id/api";
 
-export const dataFetch = async()=>{
+export const dataFetch = async(country)=>{
+    let changableUrl = url;
+    if(country){
+        changableUrl = `${url}/countries/${country}`;
+    }
     try{
-        const {data:{confirmed , recovered , deaths , lastUpdate}} = await axios.get(url);
+        const {data:{confirmed , recovered , deaths , lastUpdate}} = await axios.get(changableUrl);
         return {confirmed,recovered,deaths,lastUpdate};
     }catch(error){
         console.log(error)
