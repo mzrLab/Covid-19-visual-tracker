@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './App.module.css';
 
-import Cards from './Components/Cards/Cards.jsx';
+import Cards from './Components/Cards/cards.jsx';
 import Chart from './Components/Charts/Chart.jsx';
 import Country from './Components/Country/Country.jsx';
 import {dataFetch} from './api';
